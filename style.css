@@ -39,7 +39,7 @@ article {
     position: relative;
     width: 400px;
     height: fit-content;
-    padding: 16px 16px 32px 16px;
+    padding: 16px 16px 24px 16px;
 
     border-radius: 30px;
 
@@ -232,13 +232,17 @@ main{
 }
 
 .categories ul {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 3fr));
 }
 
 .categories__card {
     padding: 0 40px 30px 40px;
+    max-width: 180px;
+    width: 100%;
+    border-radius: 30px;
 }
 
 .categories__card h4{
@@ -252,17 +256,20 @@ main{
     padding-top: 50px;
 }
 
-/* RECIPES BLOCK */
+/* RECIPES SECTION */
+.recipes {
+    margin-bottom: 143px;
+}
 
-.recipe__articles{
+.recipes-article{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
 }
 
 .recipes header {
     text-align: center;
-    max-width: 706px;
+    max-width: 806px;
     margin: 0 auto;
     margin-bottom: 96px;
 
@@ -270,7 +277,7 @@ main{
     gap: 24px;
 }
 
-.recipe__favorite__icon {
+.recipes-article__favorite__icon {
     position: absolute;
     right: 36px;
     top: 36px;
@@ -283,7 +290,7 @@ main{
     background-color: #fff;
 }
 
-.article__categories {
+.recipes-article__meta-item {
     display: flex;
     gap: 24px;
 
@@ -295,9 +302,46 @@ main{
     color: #00000099;
 }
 
-.article__categories__icon {
+.recipes-article__meta-icon {
     user-select: none;
     display: flex;
     gap: 10px;
     align-items: center;
 }
+
+/* LEARN MORE SECTION */
+
+.learn-more {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 160px;
+}
+
+.learn-more__info {
+    margin: 169px 44px 72px;
+    display: grid;
+    gap: 24px;
+}
+
+.learn-more__info a {
+    margin-top: 36px;
+}
+
+/* CHECK-OUT SECTION */
+
+.check-out header {
+    text-align: center;
+    max-width: 806px;
+    margin: 0 auto;
+    margin-bottom: 96px;
+    display: grid;
+    gap: 24px;
+}
+
+.check-out__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
